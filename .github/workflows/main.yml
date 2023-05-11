@@ -34,5 +34,5 @@ jobs:
       - name: Deploy Manifest
         uses: actions-hub/kubectl@master
         with:
-          args: get node
-#          args: apply -f kube/
+#          args: get node
+          args: apply -f kube/
