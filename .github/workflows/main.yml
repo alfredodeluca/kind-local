@@ -26,6 +26,7 @@ jobs:
   kind_cluster_local:
     runs-on: self-hosted
     name: Run a manifest on a local k8s cluster
+    needs: new_job
     env:
       KUBE_CONFIG: ${{ secrets.KIND_KUBE_CLUSTER}}
     steps:
