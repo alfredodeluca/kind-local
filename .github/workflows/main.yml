@@ -27,12 +27,13 @@ jobs:
         run: echo "Hello from the variable " ${{ vars.ALFREDO_VAR }}
   create-cluster:
     runs-on: self-hosted
+    needs: kind_cluster_local
     steps:
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.4.0
         with: 
           cluster_name: test-alfredo-local
-          kubectl_version: 1.25
+          kubectl_version: v1.25.5
   kind_cluster_local:
     runs-on: self-hosted
     name: Run a manifest on a local k8s cluster
