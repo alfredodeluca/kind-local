@@ -23,6 +23,12 @@ jobs:
     runs-on: self-hosted
     name: test 
     steps:
+      - name: Cache Primes
+        id: cache-primes
+        uses: actions/cache@v3
+        with:
+          path: prime-numbers
+          key: ${{ runner.os }}-primes
       - name: 1 test
         run: echo "Hello from the variable " ${{ vars.ALFREDO_VAR }}
   kind_cluster_local:
