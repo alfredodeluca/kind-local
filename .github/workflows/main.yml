@@ -27,7 +27,7 @@ jobs:
         run: echo "Hello from the variable " ${{ vars.ALFREDO_VAR }}
   create-cluster:
     runs-on: self-hosted
-    needs: kind_cluster_local
+    needs: new_job
     steps:
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.5.0
