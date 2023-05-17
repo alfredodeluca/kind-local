@@ -32,7 +32,7 @@ jobs:
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.5.0
         with: 
-#           cluster_name: test-alfredo-local
+          cluster_name: test-alfredo-local
           config: ./kind/install.yml
   kind_cluster_local:
     runs-on: self-hosted

@@ -15,6 +15,7 @@ nodes:
 - role: control-plane
 - role: worker
 - role: worker
+- role: worker
 
 networking:
 # WARNING: It is _strongly_ recommended that you keep this the default
