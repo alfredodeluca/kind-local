@@ -33,6 +33,7 @@ jobs:
         uses: helm/kind-action@v1.5.0
         with: 
           cluster_name: test-alfredo-local
+          config: ./kind/install.yml
   kind_cluster_local:
     runs-on: self-hosted
     name: Run a manifest on a local k8s cluster
