@@ -34,6 +34,10 @@ jobs:
         with: 
           cluster_name: test-alfredo-local
           config: ./kind/install.yml
+      - name: Deploy Manifest
+        uses: actions-hub/kubectl@master
+        with:
+          args: apply -f kube/
   kind_cluster_local:
     runs-on: self-hosted
     name: Run a manifest on a local k8s cluster
