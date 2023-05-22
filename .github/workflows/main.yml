@@ -25,6 +25,13 @@ jobs:
     steps:
       - name: 1 test
         run: echo "Hello from the variable " ${{ vars.ALFREDO_VAR }}
+  new_job_dev: 
+    runs-on: self-hosted
+    environment: DEV
+    name: test 
+    steps:
+      - name: 1 test
+        run: echo "Hello from the variable " ${{ vars.ALFREDO_VAR }}
   create-cluster:
     runs-on: self-hosted
     needs: new_job
