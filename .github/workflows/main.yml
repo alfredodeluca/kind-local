@@ -30,7 +30,7 @@ jobs:
     environment: DEV
     name: test_from_dev 
     steps:
-      - name: 1 test
+      - name: Print variables from DEV
         run: echo "Hello from the variable " ${{ vars.ALFREDO_VAR }}
   create-cluster:
     runs-on: self-hosted
